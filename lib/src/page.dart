@@ -40,14 +40,22 @@ class _PDFPageState extends State<PDFPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        decoration: null,
-        child: ZoomableWidget(
-          zoomSteps: 3,
-          minScale: 1.4,
-          panLimit: 0.8,
-          maxScale: 3.0,
-          child: Image(image: provider),
-        ));
+    return Padding(
+      padding: const EdgeInsets.only(
+        top: 10,
+        right: 20,
+        left:30
+      ),
+      child: Container(
+          decoration: null,
+          child: ZoomableWidget(
+            zoomSteps: 3,
+            minScale: 1.0,
+            initialScale: 1.4,
+            panLimit: 0.8,
+            maxScale: 3.0,
+            child: Image(image: provider),
+          )),
+    );
   }
 }
