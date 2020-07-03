@@ -220,6 +220,10 @@
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state x="192" y="35" key="SettingsEditor/0.23.1366.745@0.23.1366.745" timestamp="1593697935576" />
+    <state x="373" y="228" key="com.intellij.ide.util.TipDialog" timestamp="1593749759459">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state x="373" y="228" key="com.intellij.ide.util.TipDialog/0.23.1366.745@0.23.1366.745" timestamp="1593749759459" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
