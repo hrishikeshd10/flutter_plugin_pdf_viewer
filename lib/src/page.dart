@@ -1,10 +1,11 @@
 import 'dart:io';
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
-import 'package:gesture_zoom_box/gesture_zoom_box.dart';
+import 'package:flutter/painting.dart';
+import 'package:matrix_gesture_detector/matrix_gesture_detector.dart';
+
+import 'package:zoom_widget/zoom_widget.dart';
 
 class PDFPage extends StatefulWidget {
   final String imgPath;
@@ -18,6 +19,8 @@ class PDFPage extends StatefulWidget {
 class _PDFPageState extends State<PDFPage> {
   ImageProvider provider;
   //final ValueNotifier<Matrix4> notifier = ValueNotifier(Matrix4.identity());
+  Matrix4 matrix = Matrix4.identity();
+  Matrix4 zerada = Matrix4.identity();
 
   @override
   void didChangeDependencies() {
@@ -45,16 +48,29 @@ class _PDFPageState extends State<PDFPage> {
   Widget build(BuildContext context) {
     return Container(
         child: Center(
-            child: Container(
-                child: Center(
-                    child: GestureZoomBox(
-      maxScale: 10,
-      doubleTapScale: 1.0,
-      duration: Duration(milliseconds: 200),
-      onPressed: () => Navigator.pop(context),
-      child: Image(
-        image: provider,
-      ),
-    )))));
+          child: GestureDetector(
+            onDoubleTap: () {
+              setState(() {
+                matrix = zerada;
+              });
+            },
+            child: MatrixGestureDetector(
+              shouldRotate: false,
+              onMatrixUpdate: (Matrix4 m, Matrix4 tm, Matrix4 sm, Matrix4 rm) {
+                setState(() {
+                  matrix = m;
+                });
+              },
+              child: Transform(
+                transform: matrix,
+                child: Image(
+                  image: provider,
+                ),
+              ),
+            ),
+          ),
+
+
+        ));
   }
 }
