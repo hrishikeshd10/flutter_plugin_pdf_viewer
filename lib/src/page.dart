@@ -45,11 +45,11 @@ class _PDFPageState extends State<PDFPage> {
     return Container(
         child: Center(
       child: Zoom(
-          initZoom: 0.048,
+          initZoom: 0.045,
           backgroundColor: Colors.white,
           enableScroll: true,
           doubleTapZoom: true,
-          width: 1100,
+          width: 1800,
           height: 1800,
           scrollWeight: 1.0,
           centerOnScale: true,
