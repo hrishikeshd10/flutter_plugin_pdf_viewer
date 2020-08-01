@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d25dbd07-759c-41ff-b4dd-eb33ccbe59a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/page.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,10 +219,10 @@
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state x="192" y="35" key="SettingsEditor/0.23.1366.745@0.23.1366.745" timestamp="1593697935576" />
-    <state x="373" y="228" key="com.intellij.ide.util.TipDialog" timestamp="1593749759459">
+    <state x="373" y="228" key="com.intellij.ide.util.TipDialog" timestamp="1593754799968">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
-    <state x="373" y="228" key="com.intellij.ide.util.TipDialog/0.23.1366.745@0.23.1366.745" timestamp="1593749759459" />
+    <state x="373" y="228" key="com.intellij.ide.util.TipDialog/0.23.1366.745@0.23.1366.745" timestamp="1593754799968" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

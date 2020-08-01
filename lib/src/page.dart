@@ -1,8 +1,10 @@
 import 'dart:io';
 import 'dart:ui';
-import 'package:flutter/widgets.dart';
+
+import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:flutter_advanced_networkimage/zoomable.dart';
+import 'package:flutter/widgets.dart';
+import 'package:zoom_widget/zoom_widget.dart';
 
 class PDFPage extends StatefulWidget {
   final String imgPath;
@@ -41,19 +43,27 @@ class _PDFPageState extends State<PDFPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: null,
-      margin: EdgeInsets.all(7),
-      // padding: EdgeInsets.only(top: 10, left: 30, right: 20),
-      child: Center(
-        child: ZoomableWidget(
-          zoomSteps: 3,
-          minScale: 1.0,
-          initialScale: 1.7,
-          panLimit: 1,
-          maxScale: 3.0,
-          child: Image(image: provider),
-        ),
-      ),
-    );
+        child: Center(
+      child: Zoom(
+          initZoom: 0.048,
+          backgroundColor: Colors.white,
+          enableScroll: true,
+          doubleTapZoom: true,
+          width: 1100,
+          height: 1800,
+          scrollWeight: 1.0,
+          centerOnScale: true,
+          zoomSensibility: 3.0,
+          onPositionUpdate: (Offset position) {
+            print(position);
+          },
+          onScaleUpdate: (double scale, double zoom) {
+            print("$scale  $zoom");
+          },
+          child: Center(
+              child: Image(
+            image: provider,
+          ))),
+    ));
   }
 }
