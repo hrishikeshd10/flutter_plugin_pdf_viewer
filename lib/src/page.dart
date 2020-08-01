@@ -4,7 +4,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
-import 'package:zoom_widget/zoom_widget.dart';
+import 'package:matrix_gesture_detector/matrix_gesture_detector.dart';
 
 class PDFPage extends StatefulWidget {
   final String imgPath;
@@ -17,6 +17,9 @@ class PDFPage extends StatefulWidget {
 
 class _PDFPageState extends State<PDFPage> {
   ImageProvider provider;
+  //final ValueNotifier<Matrix4> notifier = ValueNotifier(Matrix4.identity());
+  Matrix4 matrix = Matrix4.identity();
+  Matrix4 zerada = Matrix4.identity();
 
   @override
   void didChangeDependencies() {
@@ -44,26 +47,27 @@ class _PDFPageState extends State<PDFPage> {
   Widget build(BuildContext context) {
     return Container(
         child: Center(
-      child: Zoom(
-          initZoom: 0.045,
-          backgroundColor: Colors.white,
-          enableScroll: true,
-          doubleTapZoom: true,
-          width: 1800,
-          height: 1800,
-          scrollWeight: 1.0,
-          centerOnScale: true,
-          zoomSensibility: 3.0,
-          onPositionUpdate: (Offset position) {
-            print(position);
+      child: GestureDetector(
+        onDoubleTap: () {
+          setState(() {
+            matrix = zerada;
+          });
+        },
+        child: MatrixGestureDetector(
+          shouldRotate: false,
+          onMatrixUpdate: (Matrix4 m, Matrix4 tm, Matrix4 sm, Matrix4 rm) {
+            setState(() {
+              matrix = m;
+            });
           },
-          onScaleUpdate: (double scale, double zoom) {
-            print("$scale  $zoom");
-          },
-          child: Center(
-              child: Image(
-            image: provider,
-          ))),
+          child: Transform(
+            transform: matrix,
+            child: Image(
+              image: provider,
+            ),
+          ),
+        ),
+      ),
     ));
   }
 }
