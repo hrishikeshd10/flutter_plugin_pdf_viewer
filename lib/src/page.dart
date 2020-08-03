@@ -48,7 +48,7 @@ class _PDFPageState extends State<PDFPage> {
             child: Container(
                 child: Center(
                     child: GestureZoomBox(
-      maxScale: 9.0,
+      maxScale: 14.0,
       doubleTapScale: 1.0,
       duration: Duration(milliseconds: 200),
       onPressed: () => Navigator.pop(context),
