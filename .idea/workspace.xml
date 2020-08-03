@@ -183,7 +183,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="flutter.settings" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunManager">
@@ -215,10 +215,10 @@
     </todo-panel>
   </component>
   <component name="WindowStateProjectService">
-    <state x="192" y="35" key="SettingsEditor" timestamp="1593697935576">
+    <state x="192" y="35" key="SettingsEditor" timestamp="1596450316269">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
-    <state x="192" y="35" key="SettingsEditor/0.23.1366.745@0.23.1366.745" timestamp="1593697935576" />
+    <state x="192" y="35" key="SettingsEditor/0.23.1366.745@0.23.1366.745" timestamp="1596450316269" />
     <state x="373" y="228" key="com.intellij.ide.util.TipDialog" timestamp="1596291850134">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
