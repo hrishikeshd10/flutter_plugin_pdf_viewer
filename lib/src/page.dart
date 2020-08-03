@@ -12,7 +12,7 @@ class PDFPage extends StatefulWidget {
   PDFPage(this.imgPath, this.num);
 
   @override
-  PDFPageState createState() => PDFPageState();
+  _PDFPageState createState() => _PDFPageState();
 }
 
 class _PDFPageState extends State<PDFPage> {
