@@ -4,11 +4,12 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
-import 'package:gesture_zoom_box/gesture_zoom_box.dart';
+import 'package:photo_view/photo_view.dart';
 
 class PDFPage extends StatefulWidget {
   final String imgPath;
   final int num;
+
   PDFPage(this.imgPath, this.num);
 
   @override
@@ -17,7 +18,6 @@ class PDFPage extends StatefulWidget {
 
 class _PDFPageState extends State<PDFPage> {
   ImageProvider provider;
-//final ValueNotifier<Matrix4> notifier = ValueNotifier(Matrix4.identity());
 
   @override
   void didChangeDependencies() {
@@ -44,17 +44,14 @@ class _PDFPageState extends State<PDFPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: Center(
-            child: Container(
-                child: Center(
-                    child: GestureZoomBox(
-      maxScale: 14.0,
-      doubleTapScale: 1.0,
-      duration: Duration(milliseconds: 200),
-      onPressed: () => Navigator.pop(context),
-      child: Image(
-        image: provider,
+      color: Colors.white,
+      child: PhotoView.customChild(
+        child: Image(
+          image: provider,
+        ),
+        backgroundDecoration: BoxDecoration(color: Colors.white),
+        minScale: 1.7,
       ),
-    )))));
+    );
   }
 }

@@ -4,6 +4,7 @@
     <list default="true" id="d25dbd07-759c-41ff-b4dd-eb33ccbe59a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +185,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunManager">
@@ -216,14 +217,17 @@
     </todo-panel>
   </component>
   <component name="WindowStateProjectService">
-    <state x="192" y="35" key="SettingsEditor" timestamp="1596450316269">
-      <screen x="0" y="23" width="1366" height="745" />
+    <state x="-982" y="35" key="SettingsEditor" timestamp="1596516652817">
+      <screen x="-1024" y="23" width="1024" height="745" />
     </state>
+    <state x="-982" y="35" key="SettingsEditor/-1024.23.1024.745/0.23.1366.745@-1024.23.1024.745" timestamp="1596516652817" />
+    <state x="192" y="35" key="SettingsEditor/-1024.23.1024.745/0.23.1366.745@0.23.1366.745" timestamp="1596515586867" />
     <state x="192" y="35" key="SettingsEditor/0.23.1366.745@0.23.1366.745" timestamp="1596450316269" />
-    <state x="373" y="228" key="com.intellij.ide.util.TipDialog" timestamp="1596291850134">
+    <state x="373" y="228" key="com.intellij.ide.util.TipDialog" timestamp="1597399271118">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
-    <state x="373" y="228" key="com.intellij.ide.util.TipDialog/0.23.1366.745@0.23.1366.745" timestamp="1596291850134" />
+    <state x="373" y="228" key="com.intellij.ide.util.TipDialog/-1024.23.1024.745/0.23.1366.745@0.23.1366.745" timestamp="1596514810625" />
+    <state x="373" y="228" key="com.intellij.ide.util.TipDialog/0.23.1366.745@0.23.1366.745" timestamp="1597399271118" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
