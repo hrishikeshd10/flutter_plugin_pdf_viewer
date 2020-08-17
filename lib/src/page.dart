@@ -18,7 +18,7 @@ class PDFPage extends StatefulWidget {
 
 class _PDFPageState extends State<PDFPage> {
   ImageProvider provider;
-  double scale = 1.5;
+  double scale = 0.9;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
