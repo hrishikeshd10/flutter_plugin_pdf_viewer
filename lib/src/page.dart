@@ -18,7 +18,7 @@ class PDFPage extends StatefulWidget {
 
 class _PDFPageState extends State<PDFPage> {
   ImageProvider provider;
-  double scale = 0.9;
+  double scale = 1.5;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -52,7 +52,7 @@ class _PDFPageState extends State<PDFPage> {
             });
           },
           zoomSteps: 10,
-          minScale: 1.5,
+          minScale: 0.9,
           initialScale: scale,
           panLimit: 1,
           maxScale: 12.0,
