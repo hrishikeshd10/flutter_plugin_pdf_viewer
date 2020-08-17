@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_advanced_networkimage/zoomable.dart';
-import 'package:photo_view/photo_view.dart';
 
 class PDFPage extends StatefulWidget {
   final String imgPath;
@@ -19,7 +18,7 @@ class PDFPage extends StatefulWidget {
 
 class _PDFPageState extends State<PDFPage> {
   ImageProvider provider;
-
+  double scale = 1.5;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -47,9 +46,14 @@ class _PDFPageState extends State<PDFPage> {
     return Container(
         decoration: null,
         child: ZoomableWidget(
+          onTap: () {
+            setState(() {
+              scale = 1.5;
+            });
+          },
           zoomSteps: 10,
           minScale: 1.5,
-          initialScale: 1.5,
+          initialScale: scale,
           panLimit: 1,
           maxScale: 12.0,
           child: Image(image: provider),
